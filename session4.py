@@ -13,7 +13,15 @@
 #     sock.close()
 
 
-import requests
-ip = input("enter the ip: ")
-response = requests.get(f"http://ip-api.com/json/{ip}")
-print(response.text)
+# import requests
+# ip = input("enter the ip: ")
+# response = requests.get(f"http://ip-api.com/json/{ip}")
+# data = response.json()
+# if data['status'] =="success":
+#     print(f"country: {data['country']}")
+#     print(f"city: {data['city']}")
+#     print(f"isp: {data['isp']}")
+
+
+with open("report.html", "w") as f:
+    f.write("<html><head></head><body><h1>Hello</h1></html>")
