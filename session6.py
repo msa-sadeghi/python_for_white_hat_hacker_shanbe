@@ -12,16 +12,21 @@
 #     t = threading.Thread(target=port_scan, args=(i,))
 #     t.start()
 
-def login():
+# password = input("enter the password: ")
+def login(password):
     correct_password = "1234"
-    password = input("enter the password: ")
     if password == correct_password:
-        print("login success...")
-    else:
-        print("login failed...")
+        return "login success..."
+    return "login failed..."
 
 # login()
 
 def brute_force():
     passwords = ["123", "password", "admin", "1234", "abcd"]
-    correct_password = "1234"
+    for p  in passwords:
+        if "success" in login(p):
+            print(f" password is {p}")
+            break
+
+brute_force()
+    
