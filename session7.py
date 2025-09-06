@@ -35,7 +35,7 @@ def generate_captcha_image(text):
         font = ImageFont.load_default()
 
     d.text((10,10), text, font=font, fill=(0,0,0))
-    img = img.rotate(30, expand=1)
+    # img = img.rotate(30, expand=1)
     buf = io.BytesIO()
     img.save(buf, format='PNG')
     buf.seek(0)
